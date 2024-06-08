@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Finite State Machines{% endblock %}
+
+{% block content %}
+<section id="finite-state-machines" class="content">
+    <h2>Finite State Machines</h2>
+
+    <div class="iframe-containerFSM">
+        <iframe src="{{ url_for('static', filename='games/FinState Machines/index.html') }}" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+    
+    <h3>Description</h3>
+    <p>
+        Finite State Machines is a workshop project made to help gain a better understanding into implementing finite state machines in GameMaker programming language (GML).
+    </p>
+    <p>
+        <strong>NOTE:</strong> A majority of this game was provided by the assignment for the ITSC-5230 class. 
+        My implementation focused on adding the player controller's state management.
+    </p>
+
+    <h3>Instructions</h3>
+    <p>
+        <strong>Controls:</strong><br>
+        <strong>Movement:</strong> Use the arrow keys to move the character.<br>
+        <strong>Pushing:</strong> When near a block, press 'E' to start or stop pushing the block.<br>
+        <strong>Dancing:</strong> Press 'Space' to make the character dance. While dancing, the character cannot perform other actions.
+    </p>
+</section>
+{% endblock %}

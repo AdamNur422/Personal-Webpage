@@ -1,0 +1,305 @@
+/* Base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    background-color: #292929;
+    color: white;
+    padding: 1em 0;
+    position: relative;
+}
+header img {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    height: 60px;
+}
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header p {
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    margin: 1em 0;
+}
+nav a {
+    margin: 0 15px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    flex: 1;
+}
+.content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.493);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #292929;
+    color: white;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons a {
+    color: #333;
+    text-decoration: none;
+    font-size: 2em;
+    transition: transform 0.3s, color 0.3s;
+}
+.social-icons a.github:hover {
+    filter: invert(100%);
+    transform: scale(1.2);
+}
+.social-icons a.linkedin:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+}
+.social-icons a.instagram:hover {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+}
+.social-icons a.email img {
+    width: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+.social-icons a.email:hover img {
+    filter: grayscale(0%);
+}
+.social-icons a.phone:hover {
+    color: #00ff1e;
+    transform: scale(1.2);
+}
+
+/* About Me */
+.about-img {
+    max-width: 30%;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+}
+.about-img.left {
+    float: left;
+    margin-right: 20px;
+}
+.about-img.right {
+    float: right;
+    margin-left: 20px;
+}
+.text-and-images {
+    overflow: hidden;
+}
+blockquote {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f4f4f9;
+    border-left: 10px solid #4CAF50;
+    font-style: italic;
+}
+#about a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+#about a:hover {
+    text-decoration: underline;
+}
+
+/* Experience Page */
+#experience {
+    padding: 40px 20px;
+}
+#experience h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+.experience-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}
+.experience-item h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.experience-item .date {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 10px;
+}
+.experience-item p {
+    font-size: 1.2em;
+    color: #555;
+}
+.course-summary {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.course-summary h4 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+.course-summary ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+.course-summary ul li {
+    margin-bottom: 5px;
+}
+.course-summary p {
+    font-size: 1.0em;
+}
+
+/* Projects */
+#projects h3 a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+#projects h3 a:hover {
+    text-decoration: underline;
+}
+.project-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+}
+.project-item a {
+    color: inherit;
+    text-decoration: none;
+}
+.project-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Projects */
+#game-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+#game-projects .game-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+#game-projects .game-item img {
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+#game-projects .game-item a {
+    color: inherit;
+    text-decoration: none;
+}
+#game-projects .game-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+#game-projects .game-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*FSM*/
+.iframe-containerFSM {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+.iframe-containerFSM iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust this value to scale down further if needed */
+    height: 100%; /* Adjust this value to scale down further if needed */
+    transform: scale(1.0); /* Adjust the scale value as needed */
+    transform-origin: 0 0;
+}
+
+/*SS*/
+.iframe-containerSS {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+.iframe-containerSS iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Adjust this value to scale down further if needed */
+    height: 200%; /* Adjust this value to scale down further if needed */
+    transform: scale(0.5); /* Adjust the scale value as needed */
+    transform-origin: 0 0;
+}
+
+/*PFM*/
+.iframe-containerPFM {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+.iframe-containerPFM iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.75); /* Adjust the scale value as needed */
+    transform-origin: 0 0;
+}

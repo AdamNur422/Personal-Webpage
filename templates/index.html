@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Adam Nur{% endblock %}
+
+{% block content %}
+<section id="about" class="content">
+    <h2>About Me</h2>
+    <div class="text-and-images">
+        <img src="{{ url_for('static', filename='img/graduation.JPG') }}" alt="Graduation Picture" class="about-img left">
+
+        <p>Hello! My name is Adam Nur and I am a second-year graduate student at the University of North Carolina at Charlotte, majoring in Computer Science with a Concentration in Data Science. 
+        I have also achieved my bachelor's here at UNC Charlotte in the Spring of 2024. Throughout my college career, 
+        I have been accepted into accelerated learning programs, allowing me to be on track to finish my master's in Fall of 2024. In my free time, 
+        I enjoy listening to music, playing video games, reading, as well as playing with my pet cat.</p>
+
+
+        <img src="{{ url_for('static', filename='img/cat.JPG') }}" alt="Pet Cat" class="about-img right">
+
+        
+        <h3>Professional Experience</h3>
+        <p>I am currently an Instructional Assistant for at UNC Charlotte
+            as well as a Dean Ambassador for the College of Computing and Informatics.</p>
+        
+        
+        <h3>Skills and Certifications</h3>
+        <ul>
+            <li>Languages: Python, Java, C, HTML/CSS, C++, SQL</li>
+            <li>Developer Tools: VS Code, Eclipse, IntelliJ IDEA, Tableau</li>
+            <li>Technologies/Frameworks: GitHub, JUnit, Express, Unity, Flask, Bootstrap, TensorFlow, Keras</li>
+        </ul>
+        
+        <br><h3>Projects</h3>
+        <p>I've worked on various projects, including a data visualization project using Tableau and D3.js to analyze trends from Spotify and YouTube data, 
+            a CNN model for fruit and vegetable image classification, and a full-stack social music-sharing platform called Riff Room.</p>
+        
+        
+        <blockquote>
+            <p> “Sometimes you have to take a leap of faith first. The trust part comes later.” – Superman, DC Comics</p>
+        </blockquote>
+
+        <p>You can download my <a href="{{ url_for('static', filename='docs/Statement_of_Purpose.pdf') }}" download>Statement of Purpose here</a>.</p>
+    </div>
+</section>
+{% endblock %}

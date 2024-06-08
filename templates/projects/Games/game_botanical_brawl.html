@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Botanical Brawl{% endblock %}
+
+{% block content %}
+<section id="botanical-brawl" class="content">
+    <h2>Botanical Brawl</h2>
+    <div class="iframe-container">
+        <iframe src="{{ url_for('static', filename='games/Botanical Brawl/index.html') }}" width="1920" height="1080" style="border:none;"></iframe>
+    </div>
+
+    <h2>Description</h2>
+    <p>
+        Botanical Brawl is a business simulator with strategic business-making and gardening with intense waves of enemies wanting to ruin your garden. You are a botanist who has opened up their very own plant store, so try your best to keep your business afloat while defending yourself from hordes of insect zombies trying to eat your plants. Plant and grow various plants, some with unique combat abilities, from explosive dragon fruit to sticky potatoes. Repel waves of zombie insects attempting to breach your garden walls. Upgrade your plants with points acquired by defeating zombies!
+    </p>
+
+    <h2>Instructions</h2>
+    <p>
+        <strong>Day Cycle - Tycoon (Garden):</strong><br><br>
+        When you press start, you spawn in the garden watching your plants grow.<br>
+        
+    </p>
+    <p>
+        <strong>Night Cycle - Garden Defense:</strong><br><br>
+        <strong>Movement:</strong> WASD<br>
+        <strong>Clicking:</strong> Click on the opponents to take them out.<br>
+        <strong>Pea Shooter:</strong> Press K.
+    </p>
+
+    <h2>Cheats</h2>
+    <ul>
+        <li>Press 1 for infinite seeds.</li>
+        <li>Press 2 for infinite plants.</li>
+        <li>Press 3 for infinite health (Night phase).</li>
+    </ul>
+</section>
+{% endblock %}

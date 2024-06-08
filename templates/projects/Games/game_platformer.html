@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Platformer{% endblock %}
+
+{% block content %}
+<section id="platformer" class="content">
+    <h2>Platformer</h2>
+    <div class="iframe-containerPFM">
+        <iframe src="{{ url_for('static', filename='games/Platformer/index.html') }}" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+</section>
+{% endblock %}

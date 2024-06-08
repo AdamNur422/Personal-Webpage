@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Scrolling Shooter{% endblock %}
+
+{% block content %}
+<section id="scrolling-shooter" class="content">
+    <h2>Scrolling Shooter</h2>
+
+    <div class="iframe-containerSS">
+        <iframe src="{{ url_for('static', filename='games/Scrolling Shooter/index.html') }}" style="border:none;"></iframe>
+    </div>    
+    
+
+    <h2>Description</h2>
+    <p>
+        Scrolling Shooter is an game where players control a spaceship navigating through a scrolling environment filled with enemies, obstacles, and power-ups.
+    </p>
+
+    <h2>Controls:</h2>
+    <p>
+        <strong>Movement:</strong> Use the arrow keys to move the spaceship left, right, up, and down.<br>
+        <strong>Shooting:</strong> Hold down the spacebar to fire bullets continuously.<br>
+        <strong>Health Pickups:</strong> Restore player’s health to 100 when collected.<br>
+    </p>
+
+
+
+
+</section>
+{% endblock %}

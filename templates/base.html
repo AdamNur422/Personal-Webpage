@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Adam Nur's Personal Webpage{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="UNCC Logo">
+        <h1>Adam Nur</h1>
+        <p>Graduate Student at UNCC - Concentration in Data Science</p>
+    </header>
+    <nav>
+        <a href="{{ url_for('index') }}">About Me</a>
+        <a href="{{ url_for('experience') }}">Experience</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2024 Adam Nur</p>
+        <div class="social-icons">
+            <a href="https://github.com/AdamNur422" target="_blank" class="github"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/adam-taisir-nur/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/clt.adamn/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:adam04222004@gmail.com" class="email"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/768px-Gmail_icon_%282020%29.svg.png" alt="Gmail Icon"></a>
+            <a href="tel:+19802401817" class="phone"><i class="fas fa-phone"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

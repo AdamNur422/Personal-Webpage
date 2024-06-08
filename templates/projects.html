@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects {% endblock %}
+
+{% block content %}
+<section id="projects" class="content">
+    <h2>Projects</h2>
+    
+    <div class="project-item">
+        <a href="{{ url_for('project_tune_trends') }}">
+            <h3>Tune Trends | Data Visualization, Tableau, D3</h3>
+            <p class="date">May 2024</p>
+            <ul>
+                <li>Developed a Tableau storyboard with multiple different interactive dashboards to visualize trends and metrics from Spotify and YouTube data. Dashboards included interactive filters, drill-down capabilities, as well as features for comparison for artist engagement and song popularity.</li>
+                <li>Implemented multiple different charts in the dashboard like tree maps, bar charts, and bubble charts as well as a customized color scale to provide insights into music trends, audience engagement, and popularity metrics.</li>
+                <li>Used D3 JavaScript library to create a Spotify-specific dashboard with artist-dependent dynamic and interactive visualizations of different song attributes such as their Tempo, Volume, energy, and streams.</li>
+            </ul>
+        </a>
+    </div>
+
+    <div class="project-item">
+        <a href="{{ url_for('project_ml') }}">
+            <h3>Fruit and Vegetable Image Classification | Machine Learning, Image Processing</h3>
+            <p class="date">April 2024</p>
+            <ul>
+                <li>Developed a convolutional neural network (CNN) model for fruit and vegetable image classification using TensorFlow and Python libraries. Focused on exploring the effectiveness of different CNN architectures and improving classification accuracy.</li>
+                <li>Implemented data augmentation techniques and added dropout and batch normalization layers to reduce overfitting and enhance model performance.</li>
+                <li>Achieved high accuracy and low test loss through a combination of standard and improved CNN models, demonstrating the impact of advanced techniques on image recognition tasks.</li>
+            </ul>
+        </a>
+    </div>
+
+    <div class="project-item">
+        <a href="{{ url_for('game_projects') }}">
+            <h3>Game Projects | Game Development with GameMaker</h3>
+            <ul>
+                <li>Developed several games using GameMaker Studio.</li>
+                <li>Each game is playable directly on the site.</li>
+            </ul>
+        </a>
+    </div>
+
+    <div class="project-item">
+        <a href="{{ url_for('project_riff_room') }}">
+            <h3>Riff Room | Full Stack Development</h3>
+            <p class="date">December 2023</p>
+            <ul>
+                <li>Developed a full-stack social music-sharing platform with features like posting, interactive engagement, session creation, and comprehensive user profiles.</li>
+                <li>Utilized Amazon Web Services (AWS) for backend support, including the storage of user profile pictures and posts.</li>
+                <li>Implemented video hosting capabilities to diversify content and further engage users.</li>
+                <li>Enhanced user experience with time-stamped posts, security features, a map API for session visualization, and CDN for efficient content delivery.</li>
+            </ul>
+        </a>
+    </div>
+
+</section>
+{% endblock %}

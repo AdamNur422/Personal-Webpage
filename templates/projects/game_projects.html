@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Game Projects - Adam Nur{% endblock %}
+
+{% block content %}
+<h2>GameMaker Projects</h2>
+<section id="game-projects" class="content">
+    
+
+    <div class="game-item">
+        <a href="{{ url_for('game_botanical_brawl') }}">
+            <h3>Botanical Brawl</h3>
+            <img src="{{ url_for('static', filename='img/botanical_brawl_thumbnail.jpg') }}" alt="Botanical Brawl">
+        </a>
+    </div>
+
+    <div class="game-item">
+        <a href="{{ url_for('game_platformer') }}">
+            <h3>Platformer</h3>
+            <img src="{{ url_for('static', filename='img/platformer_thumbnail.jpg') }}" alt="Platformer">
+        </a>
+    </div>
+
+    <div class="game-item">
+        <a href="{{ url_for('game_scrolling_shooter') }}">
+            <h3>Scrolling Shooter</h3>
+            <img src="{{ url_for('static', filename='img/scrolling_shooter_thumbnail.jpg') }}" alt="Scrolling Shooter">
+        </a>
+    </div>
+
+    <div class="game-item">
+        <a href="{{ url_for('game_fin_state_machines') }}">
+            <h3>Finite State Machines</h3>
+            <img src="{{ url_for('static', filename='img/finite_state_machines_thumbnail.jpg') }}" alt="Finite State Machines">
+        </a>
+    </div>
+
+</section>
+{% endblock %}
