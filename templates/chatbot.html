@@ -1,0 +1,39 @@
+<!-- templates/chatbot.html -->
+{% extends "base.html" %}
+
+{% block title %}Chatbot - Adam Nur's Personal Webpage{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Chat with Adam's AI Assistant</h2>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your message here...">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#send-button').click(function() {
+            const userInput = $('#user-input').val();
+            if (userInput) {
+                $('#chat-box').append('<div class="user-message">' + userInput + '</div>');
+                $.ajax({
+                    url: '{{ url_for('chat') }}',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ message: userInput }),
+                    success: function(response) {
+                        $('#chat-box').append('<div class="bot-message">' + response.reply + '</div>');
+                        $('#user-input').val('');
+                    }
+                });
+            }
+        });
+    });
+</script>
+{% endblock %}
